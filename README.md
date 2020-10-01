@@ -1,5 +1,7 @@
 # photobook-app
 
+Photobook APP in Vue 3, Tailwind and AWS Amplify
+
 ## Project setup
 ```
 yarn install
