@@ -10,6 +10,11 @@
       "StackName": "amplify-photovueamplify-dev-140425",
       "StackId": "arn:aws:cloudformation:eu-west-1:154438629253:stack/amplify-photovueamplify-dev-140425/a2fb4630-03e6-11eb-97f9-0a7ed3c11d8c",
       "AmplifyAppId": "d3nmv00rbds0js"
+    },
+    "categories": {
+      "auth": {
+        "photovueamplify424380a2": {}
+      }
     }
   }
 }
