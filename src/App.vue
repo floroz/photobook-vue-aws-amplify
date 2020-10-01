@@ -1,11 +1,17 @@
-<template>test</template>
+<template>
+  <Login />
+</template>
 
 <script>
+import Login from "./components/Login";
+import store from "@/store";
 export default {
   name: "App",
-  components: {},
+  store,
+  components: {
+    Login,
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
