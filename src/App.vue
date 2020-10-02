@@ -1,15 +1,19 @@
 <template>
-  <Login />
+  <router-view />
 </template>
 
 <script>
-import Login from "./components/Login";
 import store from "@/store";
 export default {
   name: "App",
   store,
   components: {
-    Login,
+    // LoginPage,
+    // AlbumDetailsPage,
+    // AlbumsPage,
+    // SignUp,
+    // Home,
+    // About,
   },
 };
 </script>

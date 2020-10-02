@@ -46,7 +46,6 @@ export default {
     }),
     async login() {
       try {
-        console.log(this.$store);
         await this.loginAction({
           username: this.username,
           password: this.password,
