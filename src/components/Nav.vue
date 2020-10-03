@@ -1,7 +1,7 @@
 <template>
   <ul class="flex justify-end">
     <li class="mr-6" v-if="!user">
-      <router-link to="/">
+      <router-link to="/login">
         <a class="text-blue-500 hover:text-blue-800 cursor-pointer">Login</a>
       </router-link>
     </li>
@@ -12,7 +12,7 @@
     </li>
     <li class="mr-6" v-if="user">
       <div class="font-semibold text-black-500">
-        Welcome {{ user.username }}
+        Welcome {{ user.attributes.email }}
       </div>
     </li>
     <li class="mr-6" v-if="user">

@@ -58,7 +58,6 @@
 </template>
 
 <script>
-console.log("Signup Page");
 export default {
   data() {
     return {

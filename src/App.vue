@@ -1,16 +1,27 @@
 <template>
-  <Navbar />
-  <router-view />
+  <div id="app">
+    <div id="nav">
+      <Navbar />
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script>
 import store from "@/store";
 import Navbar from "@/components/Nav.vue";
+import { mapActions } from "vuex";
 export default {
   name: "App",
   store,
   components: {
     Navbar,
+  },
+  methods: {
+    ...mapActions("auth", ["authAction"]),
+  },
+  mounted() {
+    this.authAction();
   },
 };
 </script>
