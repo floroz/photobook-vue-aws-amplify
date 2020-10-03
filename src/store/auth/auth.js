@@ -30,7 +30,7 @@ export const auth = {
         return Promise.reject(error);
       }
     },
-    async signUp(_, { username, password, email }) {
+    async signup(_, { username, password, email }) {
       try {
         await Auth.signUp({
           username,
