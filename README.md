@@ -1,6 +1,6 @@
 # photobook-app
 
-Photobook APP in Vue 3, Tailwind and AWS Amplify
+Photobook APP in Vue 3, Tailwind, GraphQL and AWS Amplify
 
 ## Project setup
 ```
