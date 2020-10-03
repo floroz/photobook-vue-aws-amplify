@@ -12,16 +12,17 @@ export const albumInfo = {
     albums: null,
   },
   mutations: {
-    setAlbum(state, payload) {
-      state.album = payload;
+    setAlbums(state, payload) {
+      state.albums = payload;
     },
   },
   actions: {
-    async createAlbum(_, newAlbum) {
+    async createAlbum({ dispatch }, newAlbum) {
       try {
-        return await API.graphql(
+        await API.graphql(
           graphqlOperation(createAlbumMutation, { input: newAlbum })
         );
+        dispatch("getAlbumsData");
       } catch (error) {
         console.error(error);
       }
@@ -32,8 +33,7 @@ export const albumInfo = {
       );
     },
     async getAlbumsData({ commit }) {
-      const albumsData = await API.graphql;
-      graphqlOperation(listAlbumsQuery, {})();
+      const albumsData = await API.graphql(graphqlOperation(listAlbumsQuery));
       commit("setAlbums", albumsData.data.listAlbums.items);
     },
   },
