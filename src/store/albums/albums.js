@@ -54,7 +54,7 @@ export const albumInfo = {
         id: photoId,
         photoAlbumId: id,
         contentType: mimeType,
-        fullSize: {
+        fullsize: {
           region,
           key,
           bucket,
@@ -70,7 +70,9 @@ export const albumInfo = {
             photoId,
           },
         });
-        await API.graphql(graphqlOperation(createPhotoMutation, inputData));
+        await API.graphql(
+          graphqlOperation(createPhotoMutation, { input: inputData })
+        );
         return Promise.resolve("Success");
       } catch (error) {
         console.error(error);
